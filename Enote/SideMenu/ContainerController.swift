@@ -11,6 +11,9 @@ import UIKit
 class ContainerController: UIViewController{
     
     var menuController :UIViewController!
+    var home :UIViewController!
+    var isExpanded = false
+    var changeicon :HomeController?
     
     
     override func viewDidLoad() {
@@ -25,7 +28,7 @@ class ContainerController: UIViewController{
     func configHome(){
         let homecontroller = HomeController()
         homecontroller.delegate=self
-        let home = UINavigationController(rootViewController: homecontroller)
+        home = UINavigationController(rootViewController: homecontroller)
         
         view.addSubview(home.view)
         addChild(home)
@@ -39,14 +42,31 @@ class ContainerController: UIViewController{
             view.insertSubview(menuController.view, at: 0)
             addChild(menuController)
             menuController.didMove(toParent: self)
-            print("Success")
+        }
+    }
+    
+    func showMenuController(Expand:Bool){
+        if Expand{
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                self.home.view.frame.origin.x = self.home.view.frame.width - 80
+                }, completion: nil)
+        }
+        else{
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                self.home.view.frame.origin.x = 0
+            }, completion: nil)
         }
     }
 }
 
 extension ContainerController:HomeControllerDelegate{
     func handleMenuToggle() {
-        configMenu()
+        if !isExpanded{
+            configMenu()
+        }
+        isExpanded = !isExpanded
+        changeicon?.changeIcon(Expanded: isExpanded)
+        showMenuController(Expand: isExpanded)
     }
     
     

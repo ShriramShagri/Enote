@@ -11,6 +11,7 @@ import UIKit
 class HomeController: UIViewController{
     
     var delegate: HomeControllerDelegate?
+    var iconimage: UIImage = #imageLiteral(resourceName: "ic_menu_white_3x")
     
     
     override func viewDidLoad() {
@@ -21,12 +22,24 @@ class HomeController: UIViewController{
     @objc func handleMenuToggle(){
         delegate?.handleMenuToggle()
     }
+    func changeIcon(Expanded:Bool=false){
+        if Expanded{
+            self.iconimage = #imageLiteral(resourceName: "baseline_clear_white_36pt_3x")
+        }
+        else{
+            self.iconimage = #imageLiteral(resourceName: "ic_menu_white_3x")
+        }
+    }
+    
+    
+    
+    
     func configNavigationBar(){
         navigationController?.navigationBar.barTintColor = .darkGray
         navigationController?.navigationBar.barStyle = .black
         
         navigationItem.title = "App Name"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "ic_menu_white_3x").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image:iconimage.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
         
     }
     
