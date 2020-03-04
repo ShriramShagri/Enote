@@ -13,7 +13,6 @@ class ContainerController: UIViewController{
     var menuController :UIViewController!
     var home :UIViewController!
     var isExpanded = false
-    var changeicon :HomeController?
     
     
     override func viewDidLoad() {
@@ -52,7 +51,7 @@ class ContainerController: UIViewController{
                 }, completion: nil)
         }
         else{
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.home.view.frame.origin.x = 0
             }, completion: nil)
         }
@@ -65,7 +64,6 @@ extension ContainerController:HomeControllerDelegate{
             configMenu()
         }
         isExpanded = !isExpanded
-        changeicon?.changeIcon(Expanded: isExpanded)
         showMenuController(Expand: isExpanded)
     }
     
