@@ -7,5 +7,5 @@
 //
 
 protocol HomeControllerDelegate {
-    func handleMenuToggle()
+    func handleMenuToggle(formenuOption menuOption: MenuOption?)
 }

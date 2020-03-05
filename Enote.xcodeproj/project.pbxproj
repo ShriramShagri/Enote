@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187A7A1A24111DD1008BFB23 /* MenuOptionCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A7A1924111DD1008BFB23 /* MenuOptionCellTableViewCell.swift */; };
+		187A7A1C2411287A008BFB23 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A7A1B2411287A008BFB23 /* MenuOptions.swift */; };
 		18B42926240FC5A90018774A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B42925240FC5A90018774A /* AppDelegate.swift */; };
 		18B4292B240FC5A90018774A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B42929240FC5A90018774A /* Main.storyboard */; };
 		18B4292E240FC5A90018774A /* Enote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18B4292C240FC5A90018774A /* Enote.xcdatamodeld */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187A7A1924111DD1008BFB23 /* MenuOptionCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCellTableViewCell.swift; sourceTree = "<group>"; };
+		187A7A1B2411287A008BFB23 /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
 		18B42922240FC5A90018774A /* Enote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B42925240FC5A90018774A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B4292A240FC5A90018774A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				18B4293D240FC64C0018774A /* HomeController.swift */,
 				18B4293F240FC65E0018774A /* MenuController.swift */,
 				18B42941240FC6710018774A /* Protocols.swift */,
+				187A7A1924111DD1008BFB23 /* MenuOptionCellTableViewCell.swift */,
+				187A7A1B2411287A008BFB23 /* MenuOptions.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -155,10 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187A7A1A24111DD1008BFB23 /* MenuOptionCellTableViewCell.swift in Sources */,
 				18B42940240FC65E0018774A /* MenuController.swift in Sources */,
 				18B4293E240FC64C0018774A /* HomeController.swift in Sources */,
 				18B4292E240FC5A90018774A /* Enote.xcdatamodeld in Sources */,
 				18B42942240FC6710018774A /* Protocols.swift in Sources */,
+				187A7A1C2411287A008BFB23 /* MenuOptions.swift in Sources */,
 				18B42926240FC5A90018774A /* AppDelegate.swift in Sources */,
 				18B4293C240FC63D0018774A /* ContainerController.swift in Sources */,
 			);

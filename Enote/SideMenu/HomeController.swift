@@ -20,18 +20,18 @@ class HomeController: UIViewController{
         configNavigationBar()
     }
     @objc func handleMenuToggle(){
-        delegate?.handleMenuToggle()
+        delegate?.handleMenuToggle(formenuOption: nil)
     }
-    func changeIcon(Expanded:Bool=false){
-        if Expanded{
-            self.iconimage = #imageLiteral(resourceName: "baseline_clear_white_36pt_3x")
-            configNavigationBar()
-        }
-        else{
-            self.iconimage = #imageLiteral(resourceName: "ic_menu_white_3x")
-            configNavigationBar()
-        }
-    }
+//    func changeIcon(Expanded:Bool=false){
+//        if Expanded{
+//            self.iconimage = #imageLiteral(resourceName: "baseline_clear_white_36pt_3x")
+//            configNavigationBar()
+//        }
+//        else{
+//            self.iconimage = #imageLiteral(resourceName: "ic_menu_white_3x")
+//            configNavigationBar()
+//        }
+//    }
     
     
     
