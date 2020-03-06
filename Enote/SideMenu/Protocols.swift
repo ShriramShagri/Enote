@@ -8,4 +8,5 @@
 
 protocol HomeControllerDelegate {
     func handleMenuToggle(formenuOption menuOption: MenuOption?)
+    func handlenewlistToggle()
 }

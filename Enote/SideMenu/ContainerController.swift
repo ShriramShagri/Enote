@@ -13,6 +13,7 @@ class ContainerController: UIViewController{
     var menuController :MenuController!
     var home :UIViewController!
     var isExpanded = false
+    var isPressed = false
     
     
     override func viewDidLoad() {
@@ -54,6 +55,12 @@ class ContainerController: UIViewController{
         }
     }
     
+    func configoption(){
+        let controller = OptionEntry()
+        present(UINavigationController(rootViewController: controller), animated: false, completion: nil)
+    }
+    
+    
     func animate(Expand:Bool, menuoption: MenuOption?){
         if Expand{
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
@@ -61,7 +68,7 @@ class ContainerController: UIViewController{
                 }, completion: nil)
         }
         else{
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
                 self.home.view.frame.origin.x = 0
             }) { (_) in
                 guard let menuoption = menuoption else { return }
@@ -89,13 +96,21 @@ class ContainerController: UIViewController{
     }
     
     func animateStatusBar(){
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 2.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.setNeedsStatusBarAppearanceUpdate()
         }, completion: nil)
     }
 }
 
 extension ContainerController:HomeControllerDelegate{
+    func handlenewlistToggle() {
+        if !isPressed{
+            configoption()
+        }
+        isPressed = !isPressed
+        
+    }
+    
     func handleMenuToggle(formenuOption menuOption: MenuOption?) {
         if !isExpanded{
             configMenu()

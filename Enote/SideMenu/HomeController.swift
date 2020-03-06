@@ -11,7 +11,7 @@ import UIKit
 class HomeController: UIViewController{
     
     var delegate: HomeControllerDelegate?
-    var iconimage: UIImage = #imageLiteral(resourceName: "ic_menu_white_3x")
+    //var iconimage: UIImage = #imageLiteral(resourceName: "ic_menu_white_3x")
     
     
     override func viewDidLoad() {
@@ -19,8 +19,12 @@ class HomeController: UIViewController{
         view.backgroundColor = .white
         configNavigationBar()
     }
-    @objc func handleMenuToggle(){
+    @objc func handlMenuToggle(){
         delegate?.handleMenuToggle(formenuOption: nil)
+    }
+    
+    @objc func toggleNewlist(){
+        delegate?.handlenewlistToggle()
     }
 //    func changeIcon(Expanded:Bool=false){
 //        if Expanded{
@@ -41,7 +45,8 @@ class HomeController: UIViewController{
         navigationController?.navigationBar.barStyle = .black
         
         navigationItem.title = "App Name"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image:iconimage.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "ic_menu_white_3x").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handlMenuToggle))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "baseline_clear_white_36pt_3x").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(toggleNewlist))
         
     }
     

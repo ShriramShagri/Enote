@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186F18BF241280E3008D1466 /* OptionEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F18BE241280E3008D1466 /* OptionEntry.swift */; };
 		187A7A1A24111DD1008BFB23 /* MenuOptionCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A7A1924111DD1008BFB23 /* MenuOptionCellTableViewCell.swift */; };
 		187A7A1C2411287A008BFB23 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A7A1B2411287A008BFB23 /* MenuOptions.swift */; };
 		18B42926240FC5A90018774A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B42925240FC5A90018774A /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		186F18BE241280E3008D1466 /* OptionEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionEntry.swift; sourceTree = "<group>"; };
 		187A7A1924111DD1008BFB23 /* MenuOptionCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCellTableViewCell.swift; sourceTree = "<group>"; };
 		187A7A1B2411287A008BFB23 /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
 		18B42922240FC5A90018774A /* Enote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186F18BD24128075008D1466 /* OptionEntryBlock */ = {
+			isa = PBXGroup;
+			children = (
+				186F18BE241280E3008D1466 /* OptionEntry.swift */,
+			);
+			path = OptionEntryBlock;
+			sourceTree = "<group>";
+		};
 		18B42919240FC5A90018774A = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		18B42924240FC5A90018774A /* Enote */ = {
 			isa = PBXGroup;
 			children = (
+				186F18BD24128075008D1466 /* OptionEntryBlock */,
 				18B4293A240FC5FD0018774A /* SideMenu */,
 				18B42925240FC5A90018774A /* AppDelegate.swift */,
 				18B42929240FC5A90018774A /* Main.storyboard */,
@@ -163,6 +174,7 @@
 			files = (
 				187A7A1A24111DD1008BFB23 /* MenuOptionCellTableViewCell.swift in Sources */,
 				18B42940240FC65E0018774A /* MenuController.swift in Sources */,
+				186F18BF241280E3008D1466 /* OptionEntry.swift in Sources */,
 				18B4293E240FC64C0018774A /* HomeController.swift in Sources */,
 				18B4292E240FC5A90018774A /* Enote.xcdatamodeld in Sources */,
 				18B42942240FC6710018774A /* Protocols.swift in Sources */,
