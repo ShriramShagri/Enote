@@ -31,14 +31,14 @@ class OptionEntry: UIViewController{
         tableview.delegate = self
         tableview.dataSource = self
         
-        tableview.register(MenuOptionCellTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableview.register(OptionEntryTableView.self, forCellReuseIdentifier: reuseIdentifier)
         
-        tableview.backgroundColor = .darkGray
+        tableview.backgroundColor = .white
         
         view.addSubview(tableview)
         tableview.translatesAutoresizingMaskIntoConstraints = false
         tableview.separatorStyle = .none
-        tableview.rowHeight = 80
+        tableview.rowHeight = 60
         tableview.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -56,7 +56,7 @@ class OptionEntry: UIViewController{
         navigationController?.navigationBar.barStyle = .black
         
         navigationItem.title = "Selector"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "baseline_clear_white_36pt_3x").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(goback))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "plus_icon").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(goback))
         configTableView()
         
     }
@@ -64,15 +64,21 @@ class OptionEntry: UIViewController{
 
 extension OptionEntry: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! MenuOptionCellTableViewCell
+        let cell = tableview.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! OptionEntryTableView
         
-        let menuOption = MenuOption(rawValue: indexPath.row)
-        cell.descriptionLabel.text = menuOption?.description
-        cell.iconImageView.image = menuOption?.icons
+        let menuOption1 = myOptions(rawValue: indexPath.row)
+        cell.iconImageView1.image = menuOption1?.icons
+        let menuOption2 = myOptions(rawValue: indexPath.row)
+        cell.iconImageView2.image = menuOption2?.icons
+        let menuOption3 = myOptions(rawValue: indexPath.row)
+        cell.iconImageView3.image = menuOption3?.icons
+        let menuOption4 = myOptions(rawValue: indexPath.row)
+        cell.iconImageView4.image = menuOption4?.icons
+        cell.selectionStyle = .none
         return cell
     }
     

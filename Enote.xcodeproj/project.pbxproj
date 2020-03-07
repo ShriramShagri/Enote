@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186F18BF241280E3008D1466 /* OptionEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F18BE241280E3008D1466 /* OptionEntry.swift */; };
+		186F18C124128B6B008D1466 /* viewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F18C024128B6B008D1466 /* viewController.swift */; };
 		187A7A1A24111DD1008BFB23 /* MenuOptionCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A7A1924111DD1008BFB23 /* MenuOptionCellTableViewCell.swift */; };
 		187A7A1C2411287A008BFB23 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A7A1B2411287A008BFB23 /* MenuOptions.swift */; };
 		18B42926240FC5A90018774A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B42925240FC5A90018774A /* AppDelegate.swift */; };
@@ -19,10 +20,13 @@
 		18B4293E240FC64C0018774A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4293D240FC64C0018774A /* HomeController.swift */; };
 		18B42940240FC65E0018774A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4293F240FC65E0018774A /* MenuController.swift */; };
 		18B42942240FC6710018774A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B42941240FC6710018774A /* Protocols.swift */; };
+		18FE2784241365A70072956B /* OptionEntryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE2783241365A70072956B /* OptionEntryTableView.swift */; };
+		18FE278624136AA80072956B /* myoptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE278524136AA80072956B /* myoptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		186F18BE241280E3008D1466 /* OptionEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionEntry.swift; sourceTree = "<group>"; };
+		186F18C024128B6B008D1466 /* viewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewController.swift; sourceTree = "<group>"; };
 		187A7A1924111DD1008BFB23 /* MenuOptionCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCellTableViewCell.swift; sourceTree = "<group>"; };
 		187A7A1B2411287A008BFB23 /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
 		18B42922240FC5A90018774A /* Enote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +40,8 @@
 		18B4293D240FC64C0018774A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		18B4293F240FC65E0018774A /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		18B42941240FC6710018774A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		18FE2783241365A70072956B /* OptionEntryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionEntryTableView.swift; sourceTree = "<group>"; };
+		18FE278524136AA80072956B /* myoptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myoptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				186F18BE241280E3008D1466 /* OptionEntry.swift */,
+				18FE2783241365A70072956B /* OptionEntryTableView.swift */,
+				18FE278524136AA80072956B /* myoptions.swift */,
 			);
 			path = OptionEntryBlock;
 			sourceTree = "<group>";
@@ -84,6 +92,7 @@
 				18B42931240FC5AA0018774A /* LaunchScreen.storyboard */,
 				18B42934240FC5AA0018774A /* Info.plist */,
 				18B4292C240FC5A90018774A /* Enote.xcdatamodeld */,
+				186F18C024128B6B008D1466 /* viewController.swift */,
 			);
 			path = Enote;
 			sourceTree = "<group>";
@@ -172,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186F18C124128B6B008D1466 /* viewController.swift in Sources */,
 				187A7A1A24111DD1008BFB23 /* MenuOptionCellTableViewCell.swift in Sources */,
 				18B42940240FC65E0018774A /* MenuController.swift in Sources */,
 				186F18BF241280E3008D1466 /* OptionEntry.swift in Sources */,
@@ -179,6 +189,8 @@
 				18B4292E240FC5A90018774A /* Enote.xcdatamodeld in Sources */,
 				18B42942240FC6710018774A /* Protocols.swift in Sources */,
 				187A7A1C2411287A008BFB23 /* MenuOptions.swift in Sources */,
+				18FE278624136AA80072956B /* myoptions.swift in Sources */,
+				18FE2784241365A70072956B /* OptionEntryTableView.swift in Sources */,
 				18B42926240FC5A90018774A /* AppDelegate.swift in Sources */,
 				18B4293C240FC63D0018774A /* ContainerController.swift in Sources */,
 			);
